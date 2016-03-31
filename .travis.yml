@@ -1,1 +1,8 @@
+addons:
+  artifacts:
+    debug: true
+    paths: [libs.zip, build.zip, testbuild.zip]
+    target_paths: be4483ec-053e-46dc-b11b-dd31a54049df
+after_success: [./df-build.sh, 'mvn cobertura:cobertura coveralls:report']
 language: java
+# Modified by Insights Service at 2016-03-31 04:49:02.841963
